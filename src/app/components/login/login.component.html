@@ -1,0 +1,44 @@
+<div class="content">
+    <button class="btn btn-primary" (click)="login();">Sign In</button>
+    <button class="btn btn-primary" (click)="getListFiles('root');">Get Files</button>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>MimeType</td>
+                <td>Link To Download</td>
+                <td>Link To Export</td>
+                <td>Link To FileMedia</td>
+                <td>Link To DirectFile</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of files">
+                <td>{{ item.id }}</td>
+                <td>
+                    <span (click)="getListFiles(item.id);" *ngIf="item.mimeType == 'application/vnd.google-apps.folder';else fileType">{{ item.name }}</span>
+                    <ng-template #fileType>
+                        {{ item.name }}
+                    </ng-template>
+                </td>
+                <td><span title="Descargar" (click)="getFile(item.id, item.mimeType, item);">{{ item.mimeType }}</span></td>
+                <td>
+                    <button (click)="download(item);">Descargar</button>
+                </td>
+                <td>
+                    <button (click)="downloadExport(item);">Descargar Export</button>
+                </td>
+                <td>
+                    <button (click)="downloadMedia(item);">Descargar FileMedia</button>
+                </td>
+                <td>
+                    <button (click)="getDirectFile(item);">Descargar DirectFile</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <button class="btn btn-primary" *ngIf="folderRoot.length > 1" (click)="dropTop(folderRoot[folderRoot.length - 2]);">Back</button>
+</div>

@@ -1,0 +1,29 @@
+<div class="content">
+    <a href="https://www.dropbox.com/oauth2/authorize?client_id=ioqi7wdbk6rt9f1&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Fupload&response_type=code" class="btn btn-default">Link to DropBox</a>
+    <button class="btn btn-primary" (click)="getFiles();">Get Files</button>
+    <br><br>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id GetFile</td>
+                <td>File Name Get Media</td>
+                <td>Path File Get</td>
+                <td>Download File</td>
+                <td>Temporary Link</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of files">
+                <td (click)="downloadFile(item)">{{ item.id }}</td>
+                <td (click)="getFileMedia(item)">
+                    {{ item.name }}
+                </td>
+                <td>{{ item.path_lower }}</td>
+                <td><button (click)="downloadFile(item)">filesdownload</button></td>
+                <td><button (click)="getTemporalLink(item)">temporary_link</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <input type="file" (change)="fileSelected($event)">
+</div>
