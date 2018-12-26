@@ -14,8 +14,12 @@ import { DownloadComponent } from './components/download/download.component';
 
 import { GoogleapiService } from './services/googleapi/googleapi.service';
 import { DropboxService } from './services/dropbox/dropbox.service';
+import { GmailService } from './services/gmail/gmail.service';
+import { GsuiteService } from './services/gsuite/gsuite.service';
 
 import { APPR } from './app-routing';
+import { GmailComponent } from './components/gmail/gmail.component';
+import { GsuiteComponent } from './components/gsuite/gsuite.component';
 
 export function initGapi(gapiSession: GoogleapiService) {
   return () => gapiSession.initClient();
@@ -29,7 +33,9 @@ export function initGapi(gapiSession: GoogleapiService) {
     DashboardComponent,
     LoginComponent,
     UploadComponent,
-    DownloadComponent
+    DownloadComponent,
+    GmailComponent,
+    GsuiteComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,7 @@ export function initGapi(gapiSession: GoogleapiService) {
     RouterModule.forRoot(APPR),
   ],
   providers: [
-    GoogleapiService, DropboxService],
+    GoogleapiService, DropboxService, GmailService, GsuiteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

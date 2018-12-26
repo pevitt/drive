@@ -4,6 +4,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { DownloadComponent } from './components/download/download.component';
+import { GmailComponent } from './components/gmail/gmail.component';
 
 export const APPR : Routes= [
 	{
@@ -21,6 +22,10 @@ export const APPR : Routes= [
 	{
 		path:'download',
 		component:DownloadComponent
+	},
+	{
+		path:'gmail',
+		component:GmailComponent
 	},
 	{
   		path: '**',

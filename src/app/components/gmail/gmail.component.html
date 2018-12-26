@@ -1,0 +1,28 @@
+<div class="content">
+    <button class="btn btn-primary" (click)="login();">Sign In</button>
+    <br>
+    <button class="btn btn-primary" (click)="getLabels();">Get Labels</button>
+    <br>
+    <button class="btn btn-primary" (click)="getEmails();">Get Emails</button>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of emails; let i = index">
+            <td>{{ item.id }}</td>
+            <td>
+                {{ item.threadId }}
+            </td>
+            <td>
+                <button (click)="getEmail(item);">Get Email</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
