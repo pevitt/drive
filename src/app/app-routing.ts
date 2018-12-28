@@ -5,6 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { DownloadComponent } from './components/download/download.component';
 import { GmailComponent } from './components/gmail/gmail.component';
+import { GsuiteComponent } from './components/gsuite/gsuite.component';
 
 export const APPR : Routes= [
 	{
@@ -26,6 +27,10 @@ export const APPR : Routes= [
 	{
 		path:'gmail',
 		component:GmailComponent
+	},
+	{
+		path:'gsuite',
+		component:GsuiteComponent
 	},
 	{
   		path: '**',
