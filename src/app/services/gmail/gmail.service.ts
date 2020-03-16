@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
-const API_KEY = 'AIzaSyCS2KUfDu55aM4hMoulldxfHIZlDOJ7VIE'; 
-const CLIENT_ID = '557098424119-8e9o60gafssf3esjmm0gfj8989idkak0.apps.googleusercontent.com';
-const SECRET_ID = 'oIhy_I7CgxUKG5A30kt6D5ec';
+const API_KEY = ''; 
+const CLIENT_ID = '';
+const SECRET_ID = '';
 const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest"];
 var SCOPES = 'https://www.googleapis.com/auth/gmail.readonly';
 declare var gapi:any;
