@@ -3,9 +3,9 @@ import {HttpClient,HttpHeaders} from '@angular/common/http';
 
 const DROPBOX_URL = 'https://api.dropboxapi.com/';
 const DROPBOX_DOWNLOAD = 'https://content.dropboxapi.com/';
-const APP_KEY = "ioqi7wdbk6rt9f1";
-const APP_SECRET = "ynisjg5cbd6qfbv";
-const TOKEN = "xyhl96dECoAAAAAAAAABjq6Vo2p9QxUw6FMPT_OPkVYlZNQFlH1oPP8XXPqPP6hC";
+const APP_KEY = "";
+const APP_SECRET = "";
+const TOKEN = "";
 
 @Injectable({
   providedIn: 'root'
